@@ -3,15 +3,18 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "OpenAcademy",
-    "summary": "Modulo de teste do open academy",
+    "summary": "My OpenAcademy",
     "version": "8.0.1.0.0",
     "category": "Custom",
-    "website": "https://www.youbypiccadilly.com.br",
-    "author": "ANDRE, Odoo Community Association (OCA)",
+    "website": "https://www.kmee.com.br",
+    "author": "KMEE, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
         "base",
     ],
+    "data": [
+        "views/course.xml"
+    ]
 }

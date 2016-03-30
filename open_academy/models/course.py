@@ -1,14 +1,17 @@
+
 from openerp import models, fields, api
 
 
-class Modelo(models.Model):
+class Course(models.Model):
 
-    _name = "modelo.modelo"
-    _description = "Modelo Base"
+    _name = "openacademy.course"
+    _description = "Course"
 
     name = fields.Char(
-        string="Nome"
+        string="Name",
+        required=True
     )
     description = fields.Text(
         string="Descricao"
     )
+

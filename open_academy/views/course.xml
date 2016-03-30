@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <YEAR(S)> <AUTHOR(S)>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+    <record model="ir.actions.act_window" id="openacademy_course_action">
+        <field name="name">Courses</field>
+        <field name="res_model">openacademy.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+     <menuitem id="openacademy_course_menu" name="Open Academy" sequence="10" />
+     <menuitem id="openacademy_course_sub_menu" parent="openacademy_course_menu"
+               name="Open Academy" sequence="10" />
+    <menuitem id="openacademy_courses_list" parent="openacademy_course_sub_menu" name="Cursos" sequence="10"
+              action="openacademy_course_action"/>
+
+
+        <record model="ir.ui.view" id="openacademy_course_tree_view">
+            <field name="name">course.tree</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course Tree">
+                    <field name="name"/>
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="openacademy_course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <form string="Course form">
+                    <group colspan="2" col="2">
+                        <separator string="General stuff" colspan="2"/>
+                        <field name="name"/>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Description">
+                            <field name="description" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+</data>
+</openerp>
