@@ -15,6 +15,7 @@
         "base",
     ],
     "data": [
-        "views/course.xml"
+        "views/course.xml",
+        "views/session.xml"
     ]
 }

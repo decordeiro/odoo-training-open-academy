@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <YEAR(S)> <AUTHOR(S)>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+    <record model="ir.actions.act_window" id="openacademy_session_action">
+        <field name="name">Sessions</field>
+        <field name="res_model">openacademy.session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="openacademy_session_list" parent="openacademy_course_sub_menu" name="Sessions" sequence="10"
+              action="openacademy_session_action"/>
+
+
+        <record model="ir.ui.view" id="openacademy_session_tree_view">
+            <field name="name">session.tree</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <tree string="Session Tree">
+                    <field name="name"/>
+                    <field name="course_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="openacademy_session_form_view">
+            <field name="name">session.form</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <form string="Course form">
+                    <group colspan="2" col="2">
+                        <field name="name"/>
+                        <field name="start_date"/>
+                        <field name="duration"/>
+                        <field name="seats"/>
+                        <field name="instructor_id"/>
+                        <field name="course_id"/>
+                        <field name="attendee_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+</data>
+</openerp>
