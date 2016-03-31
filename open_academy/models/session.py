@@ -21,4 +21,4 @@ class Course(models.Model):
     )
     instructor_id = fields.Many2one('res.partner')
     course_id = fields.Many2one('openacademy.course')
-
+    attendee_id = fields.One2many('openacademy.attendee', 'id')

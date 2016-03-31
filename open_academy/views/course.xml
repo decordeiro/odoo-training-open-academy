@@ -22,7 +22,7 @@
             <field name="arch" type="xml">
                 <tree string="Course Tree">
                     <field name="name"/>
-                    <field name="description" />
+                    <field name="responsable_id" />
                 </tree>
             </field>
         </record>

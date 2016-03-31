@@ -15,5 +15,6 @@ class Course(models.Model):
         string="Descricao"
     )
     responsable_id = fields.Many2one('res.users')
+    session_id = fields.One2many('openacademy.session', 'id')
 
 
