@@ -1,5 +1,5 @@
 
-from openerp import models, fields, api
+from openerp import fields, models
 
 
 class Course(models.Model):
@@ -14,4 +14,6 @@ class Course(models.Model):
     description = fields.Text(
         string="Descricao"
     )
+    responsable_id = fields.Many2one('res.users')
+
 
